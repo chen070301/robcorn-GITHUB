@@ -1,0 +1,60 @@
+# 陈昶希 / 机器人队 - 2026年8月6日
+
+## 8.6 Git 基础操作
+
+### 今日完成事项
+* 完成了 Git 本地仓库的初始化与配置
+* 练习了文件的暂存、提交与历史记录查看
+* 掌握了分支（Branch）的创建、切换与合并（Merge）
+* 成功将本地代码推送到远程 GitHub 仓库
+
+### 今日 Git 操作流程
+1. `git init` —— 初始化本地仓库
+2. `git add` —— 将修改添加到暂存区
+3. `git commit` —— 提交更改到本地仓库历史
+4. `git branch` & `git checkout` —— 创建并切换开发分支
+5. `git merge` —— 将分支修改合并主分支
+6. `git push` —— 推送本地代码到远程仓库
+
+### 常用 Git 命令汇总
+
+| 命令 | 作用 | 什么时候用 |
+| :--- | :--- | :--- |
+| `git status` | 查看当前工作区和暂存区的状态 | 修改文件后，准备提交或查看有哪些文件被变动时 |
+| `git commit -m "msg"` | 将暂存区的内容提交到本地仓库 | 完成一个独立的功能模块或修复 Bug 后保存快照 |
+| `git checkout -b <branch>`| 创建并立即切换到新的分支 | 需要开发新功能或实验性特性，避免影响主分支时 |
+
+### 实际执行命令记录
+
+```bash
+# 初始化并配置仓库
+git init
+git config user.name "YourName"
+git config user.email "your_email@example.com"
+
+# 创建文件并提交
+echo "# My Project" > README.md
+git add README.md
+git commit -m "feat: initial commit with README"
+
+# 创建并切换到 dev 分支
+git checkout -b feature/sensing-module
+
+# 修改代码后提交
+git add .
+git commit -m "feat: add multi-sensor temperature drift compensation algorithm"
+
+# 切回 main 分支并合并
+git checkout main
+git merge feature/sensing-module
+
+# 关联远程仓库并推送
+git remote add origin https://github.com/chen070301/robcorn8.6
+git branch -M main
+git push -u origin main
+```
+
+### 个人 GitHub 仓库
+* 我的 GitHub 个人仓库主页：[https://github.com/chen070301/robcorn8.6](https://github.com/chen070301/robcorn8.6)
+doc/学习记录.md
+Displaying doc/学习记录.md.
